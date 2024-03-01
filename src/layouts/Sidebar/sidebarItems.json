@@ -1,0 +1,10 @@
+[
+    {
+        "icon": "<HomeIcon />",
+        "content": "Home"
+    },
+    {
+        "icon": "<LocalLibraryIcon />",
+        "content": "MyBooks"
+    }
+]
