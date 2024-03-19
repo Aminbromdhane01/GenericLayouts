@@ -9,6 +9,7 @@ const BookCard = styled(Card)<StyledCardProps>(({ theme, isHovered }) => ({
   boxShadow: isHovered ? '0 8px 16px rgba(0, 0, 0, 0.2)' : '0 4px 8px rgba(0, 0, 0, 0.1)',
   transition: 'box-shadow 0.3s ease-in-out',
   cursor: isHovered ? 'pointer' : 'pointer',
+  border: '0.5px solid rgb(216,216,216)'
 }));
 
 export default BookCard;

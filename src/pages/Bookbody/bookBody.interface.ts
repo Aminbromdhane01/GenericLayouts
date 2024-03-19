@@ -5,5 +5,8 @@ export interface Book {
 }
 
 export interface BookBodyProps {
-    books: Book[];
+    books?: Book[];
+    isLoading?: boolean;
+    isError?: boolean;
+    isSuccess?: boolean;
 }

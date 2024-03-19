@@ -1,11 +1,12 @@
 'use client'
 import React, { useState } from "react";
-import { CardContent, Typography, Button } from "@mui/material";
+import { CardContent, Typography, Button, Box } from "@mui/material";
 import ControlledRating from "@/components/Rating/ControlledRating";
 import { BookPresenterProps } from "./card.interface";
 import BookCard from "./styles/card.style";
 import StyledCardMedia from "./styles/cardmedia.style";
 import StyledCardActions from "./styles/cardaction.style";
+import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 const BookCardPresenter = ({ title, description, ratingValue, onRatingChange }: BookPresenterProps) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -31,10 +32,11 @@ const BookCardPresenter = ({ title, description, ratingValue, onRatingChange }: 
       </CardContent>
       <StyledCardActions >
         <ControlledRating value={ratingValue} onChange={onRatingChange} />
-        <Button size="small" color="primary">
-          Learn More
-        </Button>
+        <Box>
+          <MoreVertIcon />
+        </Box>
       </StyledCardActions>
+
     </BookCard>
   );
 };

@@ -1,8 +1,8 @@
-import { Grid } from "@mui/material";
+import { Button, Grid, Paper, Typography } from "@mui/material";
 import { styled } from '@mui/system';
 
 interface Layout {
-    LeftLayout: React.ReactNode
+    LeftLayout?: React.ReactNode
     RightLayout: React.ReactNode
 }
 const StyledGrid = styled(Grid)(({ theme }) => ({
@@ -15,14 +15,16 @@ const StyledGrid = styled(Grid)(({ theme }) => ({
 
 const PageLayout = ({ LeftLayout, RightLayout }: Layout) => {
     return (
-        <Grid container>
-            <StyledGrid item xs={12} sm={2} md={2} lg={2}>
-                {LeftLayout}
-            </StyledGrid>
-            <Grid item container xs={12} sm={10} md={10} lg={10} spacing={2} pt={1}>
-                {RightLayout}
+        <Paper elevation={2} style={{ margin: '60px 40px 40px 40px', padding: '0px', display: 'flex', justifyContent: 'center', alignItems: 'center', border: '1px , solid', flexDirection: 'column' }} >
+            <Typography variant="h4" fontFamily={'bold'} marginBottom={4}>Most Popular Books</Typography>
+            <Grid container justifyContent={'space-around'} >
+
+                <Grid item container xs={12} sm={10} md={10} lg={10} spacing={4} >
+                    {RightLayout}
+                </Grid>
             </Grid>
-        </Grid>
+
+        </Paper>
     );
 };
 
